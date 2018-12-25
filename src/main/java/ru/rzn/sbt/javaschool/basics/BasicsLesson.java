@@ -158,7 +158,7 @@ public class BasicsLesson {
             else if (input.charAt(i) == '-') y++;
             else if (input.charAt(i) == ',') z++;
         }
-        
+
         return len*r*l*x*y*z;
     }
 

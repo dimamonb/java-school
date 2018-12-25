@@ -1,11 +1,12 @@
 package ru.rzn.sbt.javaschool.basics;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class LethalWeapon {
 
     private static long nextSerial = 0;
-    private final long serial = 2;
+    private long serial;
 
     public long getSerial() {
         return serial;
@@ -34,9 +35,11 @@ public class LethalWeapon {
     public LethalWeapon(){}
 
     public LethalWeapon(String color, Double power, int roundsLeft){
+        Random random = new Random();
         this.color = color;
         this.power = power;
         this.roundsLeft = roundsLeft;
+        this.serial = random.nextLong();
     }
 
     @Override
